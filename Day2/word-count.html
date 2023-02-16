@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let input = "I am also Engineer";
+        let wordCount = 0;
+
+        function isCharacter(char) {
+            if ((char >= 'a' && char <= 'z') || (char >= 'A' && char<= 'Z')) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function WasPreviousCharacterAlphabet(char) { 
+            if ((char >= 'a' && char <= 'z') || (char >= 'A' && char<= 'Z')) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        for (let i = 0; i < input.length; i++) {
+            if ( (WasPreviousCharacterAlphabet(input[i-1])) && (input[i] === ' ' || i === input.length - 1)) {
+                wordCount++;
+            }
+        }
+
+        var isCharacter = isCharacter('S')
+        document.write(wordCount)
+    </script>
+</body>
+
+</html>
