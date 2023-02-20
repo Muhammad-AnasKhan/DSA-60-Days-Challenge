@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <script>
+        class DynamicArray {
+            constructor() {
+                this.array = [];
+                this.length = 0;
+            }
+
+            push(element) {
+                this.array[this.length] = element;
+                this.length++;
+            }
+
+            pop() {
+                if (this.length === 0) {
+                    return undefined;
+                }
+                const lastElement = this.array[this.length - 1];
+                delete this.array[this.length - 1];
+                this.length--;
+                return lastElement;
+            }
+
+            get(index) {
+                if (index < 0 || index >= this.length) {
+                    return undefined;
+                }
+                return this.array[index];
+            }
+
+            set(index, element) {
+                if (index < 0 || index >= this.length) {
+                    return undefined;
+                }
+                this.array[index] = element;
+            }
+        }
+
+        var arr  = new DynamicArray();
+        pushed = arr.push("one")
+        pushed_2 = arr.push("two")
+        pop_1 = arr.pop()
+        document.write(arr.get(0))
+
+    </script>
+</body>
+
+</html>
