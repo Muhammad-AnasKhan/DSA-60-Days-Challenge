@@ -4,3 +4,4 @@ def print_chars(word):
 
 print_chars("Be Patient and Grateful!!")
 
+
